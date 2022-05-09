@@ -1,8 +1,8 @@
 const app = document.getElementById("app");
 
-let cryptoSocket = new WebSocket(
-  "wss://streamer.cryptocompare.com/v2?api_key=109ba6b0b42104abee2610bf225ff1645e0a29cbb95f539dd3e517fbb5159323"
-);
+const socketUrl = new URL('wss://streamer.cryptocompare.com/v2?api_key=109ba6b0b42104abee2610bf225ff1645e0a29cbb95f539dd3e517fbb5159323');
+
+let cryptoSocket = new WebSocket(socketUrl);
 
 let btcToUsd = 0;
 let ethToUsd = 0;
